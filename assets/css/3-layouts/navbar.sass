@@ -1,0 +1,309 @@
+nav
+  position: relative
+
+  .logo
+    display: inline-block
+    position: absolute
+    z-index: 1
+    padding: 10px 20px
+    left: 0
+    top: 0
+
+    a
+      display: inline-block
+
+      img
+        width: 154px
+
+  #logo2
+    display: none
+
+  .desktop-nav
+    padding-right: 50px
+    position: absolute
+    z-index: 1
+    right: 0
+    top: 0
+
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 10px 0
+      width: 100%
+      @include display(flex)
+      background: transparent
+
+      li
+        display: inline-block
+        font-size: 14px
+
+        &:first-child
+          margin-left: auto
+
+        &:hover
+          outline: 2px solid $white
+
+        a
+          text-decoration: none
+          color: $white
+          display: inline-block
+          padding: 10px 20px
+
+  .mobile-nav-toggle
+    display: none
+    width: 25px
+    height: 25px
+    margin-right: 20px
+    @include align-items(center)
+    cursor: pointer
+    background: rgba($white,0.8)
+    border-radius: 50%
+    padding: 7px
+
+    span,
+    span:before,
+    span:after
+      content: ""
+      display: block
+      height: 2px
+      width: 100%
+      background: $midnight
+      position: relative
+      transition: all 200ms ease-in-out
+
+    span:before
+      top: 7px
+
+    span:after
+      top: -9px
+
+    &.is-open
+      z-index: 1001
+
+    &.is-open span
+      background: transparent
+
+    &.is-open span:before,
+    &.is-open span:after
+      @include transform-origin(center)
+      @include transform(rotate(45deg))
+      top: 0
+
+    &.is-open span:after
+      @include transform(rotate(-45deg))
+
+// Mobile Nav
+.mobile-nav
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: $darkness
+  @include transform(translateX(-100%))
+  transition: all 300ms ease-in-out
+  @include display(flex)
+  @include justify-content(center)
+  @include align-items(center)
+
+  ul
+    list-style-type: none
+    padding: 0
+    width: 100%
+    text-align: center
+
+    li
+      padding: 10px 20px
+      font-size: 8vw
+
+      &:active
+        background: rgba(255,255,255, 0.2)
+
+      a
+        text-decoration: none
+        color: $white
+
+.mobile-nav.is-open
+  @include transform(translateX(0%))
+  position: fixed
+  z-index: 1000
+
+
+// Contact Us overlay:
+.overlay
+  min-height: 550px
+  background: rgba(0,0,0,0.75)
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 2
+  opacity: 0
+  pointer-events: none
+  transition: all 700ms ease-in-out
+
+  &.is-open
+    opacity: 1
+    pointer-events: auto
+
+    .modal
+      @include transform(translateY(0))
+
+.modal
+  @include transform(translateY(-1000px))
+  transition: all 600ms ease-in-out
+  max-width: 100%
+  min-height: 550px
+  background: $aboutBlue
+  padding: 30px
+  box-shadow: 0 20px 0px rgba(0,0,0,0.4)
+  position: relative
+  color: $white
+
+  .close-btn
+    position: absolute
+    top: 20px
+    right: 5%
+    height: 50px
+    width: 50px
+    font-size: 50px
+    text-align: center
+    color: $white
+    line-height: 30px
+    cursor: pointer
+    transition: all 100ms ease-in-out
+
+    &:hover
+      @include transform(scale(1.3))
+
+  .container
+    padding-top: 20px
+
+    h2
+      font-weight: 300
+
+    p
+      line-height: 1.5
+      font-weight: 100
+      font-size: 18px
+
+      a
+        color: $teal
+        text-decoration: none
+
+    form
+      color: black
+      position: relative
+      margin-top: 50px
+
+      .formInput
+        display: inline-block
+        vertical-align: top
+        float: right
+        width: 50%
+
+        &:first-child
+          float: left
+          width: 40%
+
+          input
+            display: block
+            margin-bottom: 27px
+            background: #50575E
+            width: 100%
+            height: 46px
+            border-radius: 3px
+            border: none
+            padding: 1px 10px
+            box-sizing: border-box
+
+            @include placeholder
+              color: $white
+              font-weight: 100
+
+
+        textarea
+          width: 100%
+          height: 192px
+          border-radius: 3px
+          padding: 10px
+          box-sizing: border-box
+          border: none
+
+          @include placeholder
+            color: $aboutBlue
+            opacity: 0.8
+            font-weight: 100
+
+      .formBottom
+        width: 100%
+        text-align: right
+        clear: both
+
+        input[type="submit"]
+          background: $teal
+          border-radius: 3px
+          border: none
+          line-height: 1.5
+          padding: 7px 50px
+          color: $white
+
+
+
+@media (max-width: 775px)
+  nav
+    position: relative
+
+    .desktop-nav
+      ul
+        display: none
+
+    .mobile-nav-toggle
+      @include display(flex)
+      position: absolute
+      right: 0
+      top: 10px
+      z-index: 2
+
+      &.is-open
+        position: fixed
+
+  // Contact Us overlay:
+  .modal
+    .container
+      form
+        .formInput
+          display: block
+          width: 100%
+          float: none
+
+          &:first-child
+            width: 100%
+
+            input
+              margin-bottom: 25px
+
+        .formBottom
+          width: 100%
+          text-align: center
+          margin-top: 20px
+
+          input[type="submit"]
+            width: 100%
+
+@media (max-width: 500px)
+  nav
+    position: relative
+
+    .logo
+      display: inline-block
+      position: absolute
+
+      #logo1
+        display: none
+
+      #logo2
+        display: block
+        width: 40px
+        height: 40px

@@ -1,0 +1,614 @@
+main#apps
+  color: $white
+  text-align: center
+  min-height: 100vh
+  background: #EEE
+
+  section#appsHeader
+    overflow: hidden
+    height: 678px
+    width: 100%
+
+    .wrapper
+      height: 100%
+      overflow: hidden
+      position: relative
+      background:
+        color: $darkness
+        attachment: fixed
+
+    @media (min-width: 1025px)
+      .sky
+        background:
+          image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/appsSkyLG.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .twinkle1
+        background:
+          image: url(../img/twinkleXL1.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .twinkle2
+        background:
+          image: url(../img/twinkleXL2.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .comet
+        position: absolute
+        top: 400px
+        width: 230px
+        height: 80px
+        background:
+          image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/comet2.png)
+          repeat: no-repeat
+          size: 100%
+
+      .moon
+        background:
+          image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/moonLG.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      ul
+        li.layer
+          height: 50vh
+          width: 1024px
+
+          .clouds
+            display: block
+            background:
+              image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/appClouds.png)
+              repeat: no-repeat
+              position: top right
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 129px
+            left: 30%
+
+    @media (max-width: 1024px)
+      .sky
+        background:
+          image: url(../img/appsSky.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .twinkle1
+        background:
+          image: url(../img/twinkleXL1.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .twinkle2
+        background:
+          image: url(../img/twinkleXL2.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .comet
+        position: absolute
+        top: 400px
+        width: 230px
+        height: 80px
+        background:
+          image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/comet2.png)
+          repeat: no-repeat
+          size: 100%
+
+      .moon
+        background:
+          image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/moon.png)
+          repeat: no-repeat
+          attachment: fixed
+        width: 100%
+        height: 100%
+        position: absolute
+
+      ul
+        li.layer
+          height: 50vh
+          width: 1024px
+
+          .clouds
+            display: block
+            background:
+              image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/appClouds.png)
+              repeat: no-repeat
+              position: top right
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 129px
+            left: 0
+
+  section#appsBody
+
+    #appsTitle
+      max-height: 89px
+      background: $white
+      color: $textGrey
+      text-align: left
+      padding: 25px
+      margin-bottom: 17px
+
+      h1
+        margin: 0
+        font-size: 30px
+        font-weight: 400
+        display: inline-block
+
+    .appBox
+      height: 758px
+      max-width: 1024px
+      background: $white
+      box-shadow: 0 20px 25px -10px rgba(0,0,0,0.3)
+      margin: 0 auto 56px
+      position: relative
+
+      #founderfox
+        height: 679px
+        width: 100%
+        position: absolute
+        top: 17px
+        background:
+          image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/foxBG.png)
+          size: cover
+
+        img.acquired
+          float: right
+
+        .aboutAppContainer
+          width: 411px
+          height: 100%
+          position: relative
+
+          .acquired
+            display: none
+
+          .aboutAppBG
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background:
+              position: left
+              image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/foxBG.png)
+              size: cover
+            @include filter(blur(10px))
+            overflow: hidden
+
+          .aboutApp
+            position: relative
+            background:
+              color: rgba(85,85,85,0.75)
+            width: 100%
+            height: 100%
+            padding: 25px
+            box-sizing: border-box
+            text-align: left
+
+            #founderfox-logo
+              margin-bottom: 61px
+
+            p
+              margin-top: 0
+              font-size: 14px
+              font-weight: 100
+
+            .appHighlights
+              position: absolute
+              bottom: 148px
+              left: 30px
+              right: 30px
+              @include display(flex)
+              @include justify-content(space-between)
+
+              img
+                width: 65px
+                height: 53px
+
+            .appStore
+              background: #FF6363
+              height: 110px
+              position: absolute
+              bottom: 0
+              left: 0
+              right: 0
+              @include display(flex)
+              @include align-items(center)
+              @include justify-content(center)
+
+
+    #eyelight
+      text-align: center
+      color: $textGrey
+      position: relative
+      height: 800px
+
+      #eyelightApp
+        background:
+          image: url(../img/eyelightBG.png)
+        height: 373px
+        color: $white
+
+        p.lead
+          font-size: 50px
+          opacity: 1
+          margin-bottom: 15px
+          padding: 30px
+
+        p.sublead
+          margin: 0
+          font-size: 48px
+          font-weight: 100
+
+      #eyelightBox
+        width: 50%
+        margin: 0 auto
+
+        #links
+          padding: 30px
+          font-size: 18px
+
+          a
+            text-decoration: none
+            color: $blue
+            font-weight: 100
+            border-right: 1px solid rgba($grey, 0.4)
+            display: inline-block
+            padding: 0 14px
+            line-height: 2
+
+            &:last-child
+              border: none
+
+        #linksMobile
+          display: none
+
+        p
+          margin: 0 auto
+          font-size: 14px
+          opacity: 0.6
+          width: 90%
+
+        form
+          input
+            display: block
+            text-align: center
+            border: none
+            box-sizing: border-box
+
+          input[type="email"]
+            margin-top: 50px
+            font-size: 3.5vw
+            border-bottom: 1px solid $grey
+            padding: 5px
+            width: 100%
+
+          @media (min-width: 1024px)
+            input[type="email"]
+              font-size: 36px
+
+          input[type="submit"]
+            margin: 38px auto 0
+            background: $pink
+            font-size: 24px
+            font-weight: 300
+            padding: 15px 0px
+            width: 100%
+            max-width: 463px
+            border: none
+            border-radius: 5px
+            color: $white
+
+  section#appsFooter
+    max-height: 117px
+    padding: 50px
+    background: $aboutBlue
+    text-align: center
+    color: rgba($white, 0.3)
+    font-size: 14px
+
+    p
+      margin: 0
+
+  @media (max-width: 667px)
+    section#appsHeader
+      .wrapper ul li
+        .clouds
+          display: none
+
+    section#appsBody
+
+      #appsTitle
+        max-height: 89px
+        background: $white
+        color: $textGrey
+        text-align: left
+        padding: 25px
+        margin-bottom: 17px
+
+        h1
+          margin: 0
+          font-size: 30px
+          font-weight: 400
+          display: inline-block
+
+      .appBox
+        height: 758px
+        max-width: 1024px
+        background: $white
+        box-shadow: 0 20px 25px -10px rgba(0,0,0,0.3)
+        margin: 0 auto 56px
+        position: relative
+
+        #founderfox
+          min-height: 579px
+          width: 100%
+          position: absolute
+          top: 17px
+          background: none
+
+          img.acquired
+            display: none
+
+          .aboutAppContainer
+            width: 100%
+            height: 100%
+            position: relative
+
+            .acquired
+              display: block
+              background: #37A8DC
+              height: 47px
+
+              p
+                margin: 0
+                padding: 15px
+                font-size: 14px
+                font-weight: 100
+
+
+            .aboutAppBG
+              position: absolute
+              top: 47px
+              right: 0
+              bottom: 0
+              left: 0
+              background:
+                position: left
+                image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/foxBG.png)
+                size: cover
+              @include filter(blur(10px))
+              overflow: hidden
+
+            .aboutApp
+              position: relative
+              background:
+                color: rgba(85,85,85,0.75)
+
+              width: 100%
+              height: 100%
+              padding: 25px
+              box-sizing: border-box
+              text-align: left
+
+              #founderfox-logo
+                margin-bottom: 61px
+                width: 100%
+
+              p
+                margin-top: 0
+                font-size: 14px
+                font-weight: 100
+
+              .appHighlights
+                position: relative
+                top: 50px
+                left: 0px
+                right: 0px
+                @include display(flex)
+                @include justify-content(space-around)
+                @include flex-wrap(wrap)
+
+                img
+                  width: 91px
+                  height: 74px
+                  padding-bottom: 30px
+
+              .appStore
+                background: #FF6363
+                height: 110px
+                position: absolute
+                bottom: 0
+                left: 0
+                right: 0
+                @include display(flex)
+                @include align-items(center)
+                @include justify-content(center)
+
+
+      #eyelight
+        text-align: center
+        color: $textGrey
+        position: relative
+        min-height: 550px
+        padding-bottom: 20px
+
+        #eyelightBox
+          margin: 0 auto
+          width: 100%
+
+          #links
+            display: none
+
+          #linksMobile
+            display: block
+            padding: 30px 0
+            font-size: 18px
+
+            a
+              padding-right: 40px
+
+              &:last-child
+                padding: 0
+
+          p
+            margin: 0 auto
+            font-size: 20px
+            opacity: 0.6
+
+          form
+            input
+              display: block
+              text-align: center
+              border: none
+              box-sizing: border-box
+
+            input[type="email"]
+              margin: 50px auto 0
+              font-size: 18px
+              border: 1px solid $babyBlue
+              border-radius: 5px
+              padding: 10px 5px
+              width: 100%
+              max-width: 463px
+
+              @include placeholder
+                color: $babyBlue
+                font-weight: 100
+
+            input[type="submit"]
+              margin: 20px auto 0
+              background: $pink
+              font-size: 24px
+              font-weight: 300
+              padding: 15px 0px
+              width: 100%
+              max-width: 463px
+              border: none
+              border-radius: 5px
+              color: $white
+
+  @media (max-width: 400px)
+    section#appsHeader
+      height: 470px
+
+      .wrapper
+        .comet
+          position: absolute
+          top: 25%
+          width: 230px
+          height: 80px
+          background:
+            image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/comet2.png)
+            repeat: no-repeat
+            size: 100%
+
+        .moon
+          background:
+            image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/moon.png)
+            repeat: no-repeat
+            attachment: fixed
+            size: cover
+            position: -75px
+          width: 100%
+          height: 100%
+          position: absolute
+
+        ul li
+          .clouds
+            display: none
+
+    section#appsBody
+
+      .appBox
+        height: 835px
+
+        #founderfox
+          height: 778px
+          position: static
+          padding-top: 12px
+
+          .aboutAppContainer
+
+            .aboutApp
+              position: relative
+              height: 731px
+
+              .appHighlights
+                top: 20px
+
+
+      #eyelight
+        text-align: center
+        color: $textGrey
+        position: relative
+        height: 810px
+        padding-bottom: 0
+
+        #eyelightApp
+          background:
+            image: url(../img/eyelightBG.png)
+          height: 373px
+          color: $white
+
+          p.lead
+            font-size: 24px
+            margin-bottom: 15px
+            padding: 52px 0 30px
+
+          p.sublead
+            margin: 0
+            font-size: 48px
+            font-weight: 100
+            padding: 10px
+
+        #eyelightBox
+          margin: 0 auto
+          width: 90%
+
+          #links
+            display: none
+
+          #linksMobile
+            display: block
+            padding: 30px 0
+            font-size: 18px
+
+            a
+              padding-right: 40px
+
+              &:last-child
+                padding: 0
+
+          p
+            margin: 0 auto
+            font-size: 12px
+            opacity: 0.6
+            width: 100%

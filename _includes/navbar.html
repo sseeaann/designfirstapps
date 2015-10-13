@@ -1,0 +1,54 @@
+<nav>
+  <div class="logo">
+    <a href="/" class="animated"><img src="assets/img/logo.png" alt="design first logo" id="logo1" /></a>
+    <a href="/"><img src="assets/img/logo2.png" alt="design first logo" id="logo2" /></a>
+  </div>
+  <div class="desktop-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="apps.html">Our Apps</a></li>
+      <li class="contactUs"><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="mobile-nav-toggle">
+    <span></span>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="apps.html">Our Apps</a></li>
+    <li class="contactUs"><a href="#">Contact Us</a></li>
+  </ul>
+</div>
+<div class="overlay">
+  <div class="modal">
+    <div class="close-btn">
+      <i class="ion-ios-close-outline"></i>
+    </div>
+    <div class="container">
+      <h2>Come say hi, or stop by for a beer...</h2>
+      <p>
+        We love our fans, come by and chat about mobile apps or design. Lets work together, if you need help with your mobile app ping us <a href="mailto:hello@designfirstapps.com">hello@designfirstapps.com</a> or message us below, you can also reach us on <a href="https://twitter.com/designfirstapps" target="_blank">Twitter</a> too.  We are located in the beautiful pacific northwest just outside Seattle, WA  in a small town called Kirkland. Our neighbors include Google, Amazon, Facebook, Microsoft, Expedia, Zillow, GoDaddy and many more awesome startups.
+      </p>
+      <form id="inquiryForm" action="http://formspree.io/designfirstapps@gmail.com" method="POST">
+        <div class="formInput">
+          <input type="hidden" name="_subject" value="Inquiry from DesignFirstApps.com">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="_replyto" placeholder="Email" required>
+          <input type="text" name="phone" placeholder="Phone number">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_next" value="//designfirstapps.com/#thanks"/>
+        </div>
+        <div class="formInput">
+          <textarea name="message" placeholder="Type your message here dude..." required></textarea>
+        </div>
+        <div class="formBottom">
+          <input type="submit" name="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

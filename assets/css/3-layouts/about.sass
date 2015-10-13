@@ -1,0 +1,221 @@
+.container
+  max-width: 1024px
+  margin: 0 auto
+
+main#about
+  position: relative
+  background: $aboutBlue
+
+  section#dudes
+    background:
+      image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/aboutBG.png)
+    height: 900px
+
+    #workStation
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      overflow: hidden
+      z-index: 0
+
+      span
+
+        img#workStationImg
+          margin: 0 auto
+          width: 100%
+          cursor: crosshair
+
+      .staff
+        position: absolute
+        max-width: 1024px
+        bottom: 0
+        left: 0
+        right: 0
+        padding: 0
+        text-align: center
+
+        .dude
+          display: inline-block
+          text-align: center
+          margin: 0 80px
+          color: $dark-text
+          width: 200px
+
+          h3,
+          p
+            margin: 0
+            line-height: 1.7
+
+          h3
+            font-size: 20px
+
+          p
+            font-size: 14px
+
+            i.fa
+              margin: 0 5px
+
+              &:hover
+                @include transform(scale(1.25))
+                transition: all 200ms ease-in-out
+
+            .fa-twitter:hover
+              color: #0090FF
+            .fa-github:hover
+              color: #000
+            .fa-dribbble:hover
+              color: #FF1290
+            .fa-linkedin:hover
+              color: #2C76B0
+
+          p.icon1
+            margin-top: 19px
+            margin-bottom: 8px
+
+            a
+              color: #999
+
+    #mobileStation
+      display: none
+
+  section#aboutUs
+    margin: 0
+    padding: 0
+    background: $aboutBlue
+    color: $white
+
+    #aboutDiv
+      padding: 50px
+
+      h2,
+      p
+        margin: 0 0 20px 0
+
+      h2
+        font-weight: 100
+
+      p
+        line-height: 1.5
+        color: $grey
+        font-weight: 100
+        font-size: 16px
+
+@media (max-width: 1040px)
+  main#about
+    section#dudes
+      background:
+        size: 100%
+        repeat: no-repeat
+
+@media (max-width: 775px)
+  main#about
+    position: relative
+
+    section#dudes
+      background: $beige
+      height: 950px
+      position: relative
+
+      #workStation
+        display: none
+
+      #mobileStation
+        text-align: center
+        padding-top: 130px
+        display: block
+
+        .dude
+          padding-bottom: 55px
+
+          h3,
+          p
+            margin: 0
+            line-height: 1.7
+
+          p.icons
+            margin-top: 20px
+
+            a
+              display: inline-block
+              line-height: normal
+              margin: 0 5px
+
+              i
+                margin: 5px auto
+                background: $white
+                border-radius: 50%
+                padding: 7.5px 10px
+
+              .fa-twitter
+                color: #0090FF
+              .fa-github
+                color: #000
+              .fa-dribbble
+                color: #FF1290
+              .fa-linkedin
+                color: #2C76B0
+
+
+        #darkGrey
+          height: 38px
+          background: #A8A8A8
+          position: absolute
+          right: 0
+          left: 0
+          bottom: 57px
+
+        #lightGrey
+          height: 57px
+          background: #D8D8D8
+          position: absolute
+          bottom: 0
+          right: 0
+          left: 0
+
+
+    section#aboutUs
+      margin: 0
+      padding: 0
+      background: $aboutBlue
+      color: $white
+
+      #aboutDiv
+        padding: 50px
+
+        h2,
+        p
+          margin: 0 0 20px 0
+
+        h2
+          font-weight: 100
+
+        p
+          line-height: 1.5
+          opacity: 0.64
+          font-weight: 100
+          font-size: 16px
+
+@media (min-width: 500px) and (max-width: 775px)
+  main#about
+    position: relative
+
+    section#dudes
+      background: $beige
+      height: 650px
+      position: relative
+
+      #workStation
+        display: none
+
+      #mobileStation
+        text-align: center
+        padding-top: 130px
+        @include display(flex)
+        @include justify-content(space-around)
+
+@media (min-height: 1240px)
+  main#about
+    position: relative
+    background: $aboutBlue
+    min-height: 100vh
